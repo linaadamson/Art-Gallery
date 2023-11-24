@@ -1,4 +1,4 @@
-import {imageDetails} from './imageDetails.js'
+import { imageDetails } from "./imageDetails.js";
 
 function objectToPos(object) {
   return object.x + " " + object.y + " " + object.z;
@@ -19,7 +19,7 @@ function cameraToPos(object) {
 }
 
 function clickHandler() {
-  let rig = document.querySelector("#rig");
+  let rig = document.querySelector("#cameraRig");
   let camera = document.querySelector("#camera");
   camera.setAttribute("look-controls", "enabled", false);
   camera.setAttribute("wasd-controls", "enabled", false);
@@ -63,13 +63,12 @@ function popupToPos(object) {
   return object.x - 0.1 + " " + object.y + " " + (object.z - 1.34);
 }
 
-
 function openPopup(target) {
   let title = document.querySelector("#title");
   let description = document.querySelector("#description");
   let popup = document.querySelector("#popup");
 
-  const selectedImg = imageDetails.find((item) => item.id === target.id);
+  const selectedImg = imageDetails.elements.find((item) => item.id === target.id);
 
   let targetPos = popupToPos(target.getAttribute("position"));
   let targetRot = cameraToRot(target.getAttribute("rotation"));
@@ -82,7 +81,7 @@ function openPopup(target) {
 }
 
 function closePopupHandler() {
-  let rig = document.querySelector("#rig");
+  let rig = document.querySelector("#cameraRig");
   let camera = document.querySelector("#camera");
   let popup = document.querySelector("#popup");
   let rigPos = objectToPos(rig.getAttribute("position"));

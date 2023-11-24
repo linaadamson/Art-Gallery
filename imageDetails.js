@@ -1,39 +1,212 @@
-export const imageDetails = [
+export const imageDetails = {
+  camera: {
+    id: "cameraRig",
+    position: "0 0 3",
+    camera: {
+      id: "camera",
+      camera: "",
+      "look-controls": "",
+      "wasd-controls": "",
+      position: "0 1.6 0",
+    },
+  },
+  models: [],
+  gallery: [
+    {
+      id: 1,
+      "gltf-model": "assets/gallery/scene.gltf",
+    },
+    {
+      id: 2,
+      "gltf-model": "assets/gallery/scene.gltf",
+      position: "3 0 10",
+      rotation: "0 90 0",
+      side: "double",
+    },
+  ],
+  popup: {
+    id: "popup",
+    height: "4",
+    width: "1",
+    material: { color: "#000000" },
+    visible: false,
+    children: [
+      {
+        id: "close",
+        "close-popup": "",
+        geometry: { primitive: "plane" },
+        material: { color: "#000000" },
+        text: { value: "X", align: "center", width: 1.6 },
+        position: "0 0.5 0.01",
+      },
+      {
+        id: "title",
+        material: { color: "#000000" },
+        text: { value: "Heavenly", align: "center", width: 1.4 },
+        position: "0 0.3 0.01",
+      },
+      {
+        id: "description",
+        material: { color: "#000000" },
+        text: {
+          value:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur nam soluta tempora veniam labore consequuntur laboriosam iste cum molestias, corrupti omnis odit dolores ipsa ipsum provident maxime dignissimos accusantium quam fuga, fugiat, voluptatibus numquam? Illo iste ipsam nulla quae eveniet eligendi? Temporibus distinctio minima odit praesentium sunt, inventore soluta",
+          align: "center",
+        },
+        position: "0 0 0.01",
+      },
+    ],
+  },
+  elements: [
     {
       id: "image1",
       title: "Heavenly",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur nam soluta tempora veniam labore consequuntur laboriosam iste cum molestias, corrupti omnis odit dolores ipsa ipsum provident maxime dignissimos accusantium quam fuga, fugiat, voluptatibus numquam? Illo iste ipsam nulla quae eveniet eligendi? Temporibus distinctio minima odit praesentium sunt, inventore soluta.",
+      frame: {
+        width: "1.85",
+        height: "1.3",
+        depth: "0.02",
+        src: "assets/Wood07_4K_BaseColor.png",
+        "normal-map": "assets/Wood07_4K_Normal.png",
+        position: "-3 1.6 3.3",
+        rotation: "0 90 0",
+        side: "double",
+        "move-camera": "",
+      },
+      image: {
+        width: "1",
+        height: "1",
+        scale: "1.78 1.25 1",
+        position: "0 0 0.02",
+        src: "assets/images/Heavenly Night No Logo PNG.png",
+        side: "double",
+      },
     },
     {
       id: "image2",
       title: "Light",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur nam soluta tempora veniam labore consequuntur laboriosam iste cum molestias, corrupti omnis odit dolores ipsa ipsum provident maxime dignissimos accusantium quam fuga, fugiat, voluptatibus numquam? Illo iste ipsam nulla quae eveniet eligendi? Temporibus distinctio minima odit praesentium sunt, inventore soluta.",
+      frame: {
+        width: "1.85",
+        height: "1.3",
+        depth: "0.02",
+        src: "assets/Wood07_4K_BaseColor.png",
+        "normal-map": "assets/Wood07_4K_Normal.png",
+        position: "-3 1.6 1.3",
+        rotation: "0 90 0",
+        side: "double",
+        "move-camera": "",
+      },
+      image: {
+        width: "1",
+        height: "0.67",
+        scale: "1.8 1.8 1",
+        position: "0 0 0.02",
+        src: "assets/images/Light That sorrounds copy.png",
+        side: "double",
+      },
     },
     {
       id: "image3",
       title: "Sirens",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur nam soluta tempora veniam labore consequuntur laboriosam iste cum molestias, corrupti omnis odit dolores ipsa ipsum provident maxime dignissimos accusantium quam fuga, fugiat, voluptatibus numquam? Illo iste ipsam nulla quae eveniet eligendi? Temporibus distinctio minima odit praesentium sunt, inventore soluta.",
+      frame: {
+        width: "1.85",
+        height: "1.3",
+        depth: "0.02",
+        src: "assets/Wood07_4K_BaseColor.png",
+        "normal-map": "assets/Wood07_4K_Normal.png",
+        position: "-3 1.6 -0.7",
+        rotation: "0 90 0",
+        "move-camera": "",
+        side: "double",
+      },
+      image: {
+        width: "1",
+        height: "0.67",
+        scale: { x: 1.76, y: 1.8, z: 1 },
+        position: "0 0 0.02",
+        src: "assets/images/sirens b copy.png",
+        side: "double",
+      },
     },
     {
       id: "image4",
       title: "Cosmic",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur nam soluta tempora veniam labore consequuntur laboriosam iste cum molestias, corrupti omnis odit dolores ipsa ipsum provident maxime dignissimos accusantium quam fuga, fugiat, voluptatibus numquam? Illo iste ipsam nulla quae eveniet eligendi? Temporibus distinctio minima odit praesentium sunt, inventore soluta.",
+      frame: {
+        width: "1.85",
+        height: "1.3",
+        depth: "0.02",
+        src: "assets/Wood07_4K_BaseColor.png",
+        "normal-map": "assets/Wood07_4K_Normal.png",
+        position: "-3 1.6 -2.7",
+        rotation: "0 90 0",
+        "move-camera": "",
+        side: "double",
+      },
+      image: {
+        width: "1",
+        height: "0.84",
+        scale: { x: 1.75, y: 1.45, z: 1 },
+        position: "0 0 0.02",
+        src: "assets/images/Cosmic Mysteries copy.png",
+        side: "double",
+      },
     },
     {
       id: "image5",
       title: "Walking",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur nam soluta tempora veniam labore consequuntur laboriosam iste cum molestias, corrupti omnis odit dolores ipsa ipsum provident maxime dignissimos accusantium quam fuga, fugiat, voluptatibus numquam? Illo iste ipsam nulla quae eveniet eligendi? Temporibus distinctio minima odit praesentium sunt, inventore soluta.",
+      frame: {
+        width: "2.9",
+        height: "1.23",
+        depth: "0.02",
+        src: "assets/Wood07_4K_BaseColor.png",
+        "normal-map": "assets/Wood07_4K_Normal.png",
+        position: "3 1.6 3",
+        rotation: "0 -90 0",
+        "move-camera": "",
+        side: "double",
+      },
+      image: {
+        width: "1",
+        height: "0.56",
+        scale: { x: 2.75, y: 2, z: 1 },
+        position: "0 0 0.02",
+        src: "assets/images/Walking in the Spirit copy.png",
+        side: "double",
+      },
     },
     {
       id: "image6",
       title: "Create",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consequatur nam soluta tempora veniam labore consequuntur laboriosam iste cum molestias, corrupti omnis odit dolores ipsa ipsum provident maxime dignissimos accusantium quam fuga, fugiat, voluptatibus numquam? Illo iste ipsam nulla quae eveniet eligendi? Temporibus distinctio minima odit praesentium sunt, inventore soluta.",
+      frame: {
+        width: "2.9",
+        height: "1.25",
+        depth: "0.02",
+        src: "assets/Wood07_4K_BaseColor.png",
+        "normal-map": "assets/Wood07_4K_Normal.png",
+        position: "3 1.6 -0.1",
+        rotation: "0 -90 0",
+        "move-camera": "",
+        side: "double",
+      },
+      image: {
+        width: "1",
+        height: "0.61",
+        scale: { x: 2.75, y: 1.85, z: 1 },
+        position: "0 0 0.02",
+        src: "assets/images/He Creates The Souls b copy.png",
+        side: "double",
+      },
     },
-  ];
-  
+  ],
+};
